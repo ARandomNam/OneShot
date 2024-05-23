@@ -194,11 +194,13 @@ img {
 
 .videoGrid {
   position: relative;
-  bottom: 60px;
+  bottom: 0px;
+  left: 5%;
   display: grid;
-  margin: 55px;
+  margin: 10px;
   grid-template-columns: repeat(2, 10vw);
   height: 30%;
+  width: 80%;
   overflow: scroll;
   gap: 5px;
   align-items: center;

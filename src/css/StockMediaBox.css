@@ -1,49 +1,50 @@
 .MediaBox .input-container {
-    position: relative;
-    width: 190%;
-    margin-top: 20px;
+  position: relative;
+  width: 190%;
+  margin-top: 20px;
 }
 
 .MediaBox .inputbox {
-    width: 100%;
-    padding: 10px 50px 10px 20px; /* Padding adjusted to accommodate button inside */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 35px;
-    background: rgba(255, 255, 255, 0.2);
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px 50px 10px 20px; /* Padding adjusted to accommodate button inside */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
 }
 
 .MediaBox .button-4.search {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    padding: 0 20px;
-    border: none;
-    background-color: #5cd0e4;
-    color: white;
-    border-radius: 0 35px 35px 0; /* Rounded corners on right side only */
-    cursor: pointer;
-    font-size: 1vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 20px;
+  border: none;
+  background-color: #5cd0e4;
+  color: white;
+  border-radius: 0 35px 35px 0; /* Rounded corners on right side only */
+  cursor: pointer;
+  font-size: 1vw;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .MediaBox .button-4.search:hover {
-    background-color: #2874a1;
+  background-color: #2874a1;
 }
 
-.imageGrid, .videoGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 10px;
-    margin-top: 20px;
+.imageGrid,
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  margin-top: 20px;
 }
 
-.stockImages, .stockVideos {
-    max-width: 100%;
-    max-height: 200px;
+.stockImages,
+.stockVideos {
+  max-width: 100%;
+  max-height: 200px;
 }
