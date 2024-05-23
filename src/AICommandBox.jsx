@@ -32,8 +32,10 @@ const AICommandBox = () => {
             ))}
         </div>
         <form onSubmit={handleSubmit}>
+        <div className="commentbox-userside">
             <input type="text" value={newMessage} onChange={handleInputChange} />
             <button type="submit">Send</button>
+        </div>
         </form>
         </div>
     );

@@ -40,7 +40,7 @@ const MainPage = () => {
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', width: '80%' }}>
 
           <div>
-            <UserTab />
+            <UserTab isDark={isDarkMode}/>
           </div>
 
           <div className="Upload">

@@ -36,9 +36,10 @@ img {
   width: auto;
   height: 100px;
 } /* Theme Change toggle checkbox*/
+
 .checkbox-container {
-  position: fixed;
-  left: 1350px;
+  position: absolute;
+  left: 90%;
   top: 10px;
   z-index: 100;
 }
@@ -124,9 +125,9 @@ img {
   top: 14%;
   left: 5%;
   width: 30%;
-  height: 80%;
-  justify-content: space-between;
+  height: 83%;
   display: flex;
+  align-items: center;
   overflow: hidden;
   flex-direction: column;
   box-sizing: border-box;
@@ -144,6 +145,26 @@ img {
 }
 
 /* Content in the panel */
+
+/* AI commentbox */
+.commentbox {
+  position: relative;
+  top: 10%;
+  height: 60vh;
+  width: 25vh;
+  overflow-y: scroll;
+  border: 1px solid #a2a1a1;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.commentbox-userside {
+  position: relative;
+  top: 7vh;
+  left: 5%;
+}
+
+/* StockMediaBox */
 .Video-audio-Select {
   position: relative;
   display: flex;
@@ -152,17 +173,6 @@ img {
   width: 50%;
   font-size: 1vw;
   border-radius: 30px;
-}
-
-.commentbox {
-  position: relative;
-  right: 10px;
-  height: 60vh;
-  width: 25vh;
-  overflow-y: scroll;
-  border: 1px solid #a2a1a1;
-  margin-bottom: 10px;
-  border-radius: 20px;
 }
 
 .MediaBox {
@@ -183,9 +193,12 @@ img {
 }
 
 .imageGrid {
+  position: relative;
+  left: 10%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 55%;
+  height: 60%;
+  width: 80%;
   overflow: scroll;
   gap: 5px;
   align-items: center;
@@ -194,12 +207,10 @@ img {
 
 .videoGrid {
   position: relative;
-  bottom: 0px;
-  left: 5%;
+  left: 10%;
   display: grid;
-  margin: 10px;
   grid-template-columns: repeat(2, 10vw);
-  height: 30%;
+  height: 35%;
   width: 80%;
   overflow: scroll;
   gap: 5px;

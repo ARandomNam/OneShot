@@ -5,14 +5,12 @@ import './css/UserTab.css';
 
 
 
-const UserTab = () => {
-
+const UserTab = ({ isDark }) => {
   const [activeTab, setActiveTab] = useState(2);
 
   const switchTab = (tabIndex) => {
     setActiveTab(tabIndex);
   };
-
 
   const [selectedOption, setSelectedOption] = useState('video');
 
@@ -35,11 +33,11 @@ const UserTab = () => {
       const activateTab = (tab, i) => {
         tabsHeader.querySelectorAll('button').forEach((button) => {
           button.removeAttribute('aria-selected');
-          button.style.color = '#555';
+          button.style.color = isDark ? '#acb3d4' : '#555';
         });
 
         tab.setAttribute('aria-selected', true);
-        tab.style.color = '#0084b5';
+        tab.style.color = isDark ? '#fbfbfb' : '#0084b5';
         activeTab = tab;
 
         tabsPanel.forEach((panel) => {
@@ -51,9 +49,10 @@ const UserTab = () => {
 
         activeTab.focus();
 
+        const leftPercent = (activeTab.offsetLeft / tabsHeader.offsetWidth) * 100;
+        
         activeTabIndicator.style.width = activeTab.offsetWidth + 'px';
-        activeTabIndicator.style.left = activeTab.offsetLeft + 80 + 'px';
-
+        activeTabIndicator.style.left = leftPercent + 7 + '%';
       };
 
       activateTab(activeTab, 0);
@@ -83,19 +82,18 @@ const UserTab = () => {
         tab.addEventListener('click', () => activateTab(tab, i));
       });
     }
-  }, []);
+  }, [isDark]);
 
   return (
 
     <div>
-
-      <div className="tabs">
+      <div className={`tabs ${isDark ? 'dark' : ''}`}>
         <div className="tabs-header" role="tablist" aria-label="my-tabs">
           <button role="tab" aria-selected="true" tabIndex="0">
-            Tab 1
+            StockMediaBox
           </button>
           <button role="tab" aria-selected="false" tabIndex="-1">
-            Tab 2
+            AICommandBox
           </button>
         </div>
 
@@ -105,39 +103,22 @@ const UserTab = () => {
               <option value="video">Video</option>
               <option value="audio">Audio</option>
             </select>
-            
-            <div>
-              <div className="selection-result-bar">
-                {activeTab === 1 && <AICommandBox />}
-                {activeTab === 2 && <StockMediaBox />}
-              </div>
-              <br />
-              <div className="feature-select">
-                <button className="button-4" onClick={() => switchTab(1)}>AICommandBox</button>
-                <button className="button-4" onClick={() => switchTab(2)}>StockMediaBox</button>
-              </div>
-            </div>
+
+            <StockMediaBox isDark={isDark}/>
+
           </div>
         </div>
-
+        
         <div className="tabs-panel" tabIndex="-1" role="tabpanel">
           <div className="panel">
+
             <select className="Video-audio-Select" value={selectedOption} onChange={handleSelectChange}>
               <option value="video">Video</option>
               <option value="audio">Audio</option>
             </select>
-            
-            <div>
-              <div className="selection-result-bar">
-                {activeTab === 1 && <AICommandBox />}
-                {activeTab === 2 && <StockMediaBox />}
-              </div>
-              <br />
-              <div className="feature-select">
-                <button className="button-4" onClick={() => switchTab(1)}>AICommandBox</button>
-                <button className="button-4" onClick={() => switchTab(2)}>StockMediaBox</button>
-              </div>
-            </div>
+
+            <AICommandBox />
+
           </div>
         </div>
 

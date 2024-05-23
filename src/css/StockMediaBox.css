@@ -1,11 +1,12 @@
 .MediaBox .input-container {
   position: relative;
   width: 190%;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .MediaBox .inputbox {
-  width: 100%;
+  width: 80%;
+  left: 8%;
   padding: 10px 50px 10px 20px; /* Padding adjusted to accommodate button inside */
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 35px;
@@ -47,4 +48,24 @@
 .stockVideos {
   max-width: 100%;
   max-height: 200px;
+}
+
+/* Dark theme */
+body.dark {
+  color: #ffffff;
+  background-color: #160c22;
+}
+
+body.dark .button {
+  background-color: #0000009e;
+  color: #fff;
+}
+
+body.dark .button-4.search {
+  background-color: #262b39;
+  color: #acb3d4;
+}
+
+body.dark .button-4.search:hover {
+  box-shadow: #ffffff 0 0 0 1px, transparent 0 0 0 0;
 }

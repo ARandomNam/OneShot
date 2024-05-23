@@ -5,8 +5,7 @@ import './css/StockMediaBox.css';
 import { useDispatch } from 'react-redux';
 import { previewMediaAction, setPreviewerLoadingAction } from './redux/actions.js';
 
-const StockMediaBox = () => {
-    
+const StockMediaBox = ({ isDark }) => {
     
     const [imageQuery, setImageQuery] = useState('');
     const [videoQuery, setVideoQuery] = useState('');
@@ -62,7 +61,7 @@ const StockMediaBox = () => {
     const addImageToPreviewer = (imagePath) => {
         dispatch(setPreviewerLoadingAction(true));
         
-        axios.post('http://127.0.0.1:5000/generate_video', {
+        axios.post('http://127.0.0.1:5001/generate_video', {
             imagePath: imagePath,
             duration: 5
         })
@@ -93,8 +92,17 @@ const StockMediaBox = () => {
                 </div>
                 <br />
                 <div className="input-container">
-                    <input className="inputbox" type="text" value={videoQuery} onChange={(e) => setVideoQuery(e.target.value)} />
-                    <button className="button-4 search" onClick={handleButtonClick2}>Search Videos</button>
+                    <input className={`inputbox ${isDark ? 'dark' : ''}`} 
+                        type="text" 
+                        value={videoQuery} 
+                        onChange={(e) => setVideoQuery(e.target.value)} 
+                    />
+
+                    <button className={`button-4 search ${isDark ? 'dark' : ''}`} 
+                    onClick={handleButtonClick2}
+                    >
+                        Search Videos
+                    </button>
                 </div>
                 <br />
             </div>
