@@ -166,6 +166,7 @@ img {
 }
 
 .commentbox-userside input {
+  border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
 }
