@@ -4,18 +4,13 @@
 * {
   font-family: "Poppins", sans-serif !important;
   font-weight: 300;
-}
-
-* {
   box-sizing: border-box;
 }
 
 /*>>>>>>>>>>>>>>>>The top/headline of the web<<<<<<<<<<<<<<<<<<*/
 .ICON {
-  display: inline-block;
-  margin: auto;
-  gap: 10px;
   display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,12 +18,9 @@
   height: 50px;
   background-image: linear-gradient(to bottom right, #a6e2f9, #6bdfec);
   text-align: left;
-  align-items: center;
   z-index: 100;
   border: 2px solid rgba(255, 255, 255, 0.3);
-
   font-size: 20px; /* Text size if picture wasn't loaded*/
-
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -64,9 +56,9 @@ img {
 }
 
 .checkbox-label .ball {
-  background-color: #ffffff;
   width: 22px;
   height: 22px;
+  background-color: #ffffff;
   position: absolute;
   left: 2px;
   top: 2px;
@@ -176,7 +168,7 @@ img {
   border-radius: 10px;
 }
 
-/* StockMediaBox */
+/* StockMediaBox more can be found in StockMediaBox.css*/
 .Video-audio-Select {
   position: relative;
   display: flex;
@@ -185,13 +177,6 @@ img {
   width: 50%;
   font-size: 1vw;
   border-radius: 30px;
-}
-
-.MediaBox {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
-  align-items: center;
 }
 
 .button-4 .search {
@@ -346,37 +331,6 @@ img {
   margin: 10px;
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>Dark theme<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-body.dark .ICON {
-  background-image: linear-gradient(to bottom right, #181a27, #373e5d);
-}
-
-body.dark .panel {
-  background-color: #0000009e;
-}
-
-body.dark .Upload {
-  background-color: #0000009e;
-  opacity: 0.8;
-}
-
-body.dark .button-4 {
-  background-color: #262b39;
-  color: #acb3d4;
-}
-
-body.dark .button-4:hover {
-  box-shadow: #ffffff 0 0 0 1px, transparent 0 0 0 0;
-}
-
-body.dark .checkbox-label {
-  background-color: #000000;
-}
-
-body.dark .checkbox-label .ball {
-  background-color: rgb(52, 51, 75);
-}
-
 /* square anime effect */
 .square {
   position: absolute;
@@ -420,4 +374,35 @@ body.dark .checkbox-label .ball {
   height: 200px;
 
   z-index: 5;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>Dark theme<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+body.dark .ICON {
+  background-image: linear-gradient(to bottom right, #181a27, #373e5d);
+}
+
+body.dark .panel {
+  background-color: #0000009e;
+}
+
+body.dark .Upload {
+  background-color: #0000009e;
+  opacity: 0.8;
+}
+
+body.dark .button-4 {
+  background-color: #262b39;
+  color: #acb3d4;
+}
+
+body.dark .button-4:hover {
+  box-shadow: #ffffff 0 0 0 1px, transparent 0 0 0 0;
+}
+
+body.dark .checkbox-label {
+  background-color: #000000;
+}
+
+body.dark .checkbox-label .ball {
+  background-color: rgb(52, 51, 75);
 }
