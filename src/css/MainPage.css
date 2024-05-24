@@ -198,38 +198,6 @@ img {
   grid-column: 2;
 }
 
-.inputbox {
-  position: relative;
-  font-size: 1vw;
-  grid-column: 1;
-}
-
-.imageGrid {
-  position: relative;
-  left: 10%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 60%;
-  width: 80%;
-  overflow: scroll;
-  gap: 5px;
-  align-items: center;
-  justify-items: center;
-}
-
-.videoGrid {
-  position: relative;
-  left: 10%;
-  display: grid;
-  grid-template-columns: repeat(2, 10vw);
-  height: 35%;
-  width: 80%;
-  overflow: scroll;
-  gap: 5px;
-  align-items: center;
-  justify-items: center;
-}
-
 .selection-result-bar {
   top: 8%;
   position: absolute;

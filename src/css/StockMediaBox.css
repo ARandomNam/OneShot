@@ -12,6 +12,9 @@
   border-radius: 35px;
   background: rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
+  position: relative;
+  font-size: 1vw;
+  grid-column: 1;
 }
 
 .MediaBox .button-4.search {
@@ -36,12 +39,32 @@
   background-color: #2874a1;
 }
 
+/* Image and Video Grid in commmon part*/
 .imageGrid,
 .videoGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
   margin-top: 20px;
+  gap: 5px;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  display: grid;
+  overflow: scroll;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Image and Video Grid different part */
+.imageGrid {
+  grid-template-columns: repeat(2, 1fr);
+  height: 60%;
+}
+
+.videoGrid {
+  height: 20%;
+  bottom: 10px;
 }
 
 .stockImages,
