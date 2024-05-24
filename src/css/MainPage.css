@@ -375,9 +375,9 @@ body.dark .panel {
   background-color: #0000009e;
 }
 
-body.dark .content {
-  border: 1px solid #181717;
+body.dark .Upload {
   background-color: #0000009e;
+  opacity: 0.8;
 }
 
 body.dark .button-4 {

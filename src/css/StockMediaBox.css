@@ -51,10 +51,6 @@
 }
 
 /* Dark theme */
-body.dark {
-  color: #ffffff;
-  background-color: #160c22;
-}
 
 body.dark .button {
   background-color: #0000009e;
