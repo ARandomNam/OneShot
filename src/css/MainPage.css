@@ -168,7 +168,12 @@ img {
 .commentbox-userside input {
   border: 1px solid #ccc;
   border-radius: 10px;
-  overflow: hidden;
+  width: 200px;
+  font-size: 12px;
+}
+
+.commentbox-userside button {
+  border-radius: 10px;
 }
 
 /* StockMediaBox */
