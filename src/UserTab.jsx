@@ -112,11 +112,6 @@ const UserTab = ({ isDark }) => {
         <div className="tabs-panel" tabIndex="-1" role="tabpanel">
           <div className="panel">
 
-            <select className="Video-audio-Select" value={selectedOption} onChange={handleSelectChange}>
-              <option value="video">Video</option>
-              <option value="audio">Audio</option>
-            </select>
-
             <AICommandBox />
 
           </div>

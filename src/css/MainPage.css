@@ -150,6 +150,7 @@ img {
 .commentbox {
   position: relative;
   top: 10%;
+  left: 10%;
   height: 60vh;
   width: 25vh;
   overflow-y: scroll;
@@ -162,6 +163,11 @@ img {
   position: relative;
   top: 7vh;
   left: 5%;
+}
+
+.commentbox-userside input {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* StockMediaBox */
