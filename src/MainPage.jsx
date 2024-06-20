@@ -44,7 +44,7 @@ const MainPage = () => {
           </div>
 
           <div className="Upload">
-            <MediaPreviewer mediaType={'video'} />
+            <MediaPreviewer />
           </div>
           <div className="Timeline">
             <TimelineEditor />

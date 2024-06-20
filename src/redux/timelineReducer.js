@@ -1,32 +1,17 @@
 import backgroundMusic from '../assets/backgroundMusic.mp3';
 import backgroundMusic2 from '../assets/backgroundMusic2.mp3';
+import Video1 from '../assets/Video1.mp4';
 
+// All the contents in initialState are examples for demostrating the functioning of the timelineEditor using the assets included
 const initialState = {
     timelineData: [
-      // {
-      //   id: "0",
-      //   actions: [
-      //     {
-      //       id: "action00",
-      //       start: 0,
-      //       end: 2,
-      //       effectId: "effect00",
-      //     },
-      //     {
-      //       id: "action01",
-      //       start: 3,
-      //       end: 5,
-      //       effectId: "effect01",
-      //     },
-      //   ],
-      // },
       {
         id: '0',
         actions: [
           {
             id: 'action0',
-            start: 0,
-            end: 30,
+            start: 30,
+            end: 60,
             effectId: 'audioEffect',
             data: {
               src: backgroundMusic,
@@ -40,8 +25,8 @@ const initialState = {
         actions: [
           {
             id: 'action1',
-            start: 30,
-            end: 60,
+            start: 60,
+            end: 90,
             effectId: 'audioEffect',
             data: {
               src: backgroundMusic2,
@@ -50,26 +35,41 @@ const initialState = {
           },
         ],
       },
-      {
-        id: '2',
-        actions: [
-          {
-            id: 'action2',
-            start: 0,
-            end: 60,
-            effectId: 'visualEffect',
-            data: {
-              src: '/src/assets/LottieAnimation.json',
-              name: 'LottieAnimation',
-            },
-          },
-        ],
-      },
+      // {
+      //   id: '2',
+      //   actions: [
+      //     {
+      //       id: 'action2',
+      //       start: 0,
+      //       end: 1000,
+      //       effectId: 'videoEffect',
+      //       data: {
+      //         src: Video1,
+      //         name: 'Video1',
+      //       },
+      //     },
+      //   ],
+      // },
       // {
       //   id: '3',
       //   actions: [
       //     {
       //       id: 'action3',
+      //       start: 0,
+      //       end: 60,
+      //       effectId: 'visualEffect',
+      //       data: {
+      //         src: '/src/assets/LottieAnimation.json',
+      //         name: 'LottieAnimation',
+      //       },
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: '4',
+      //   actions: [
+      //     {
+      //       id: 'action4',
       //       start: 10,
       //       end: 40,
       //       effectId: 'visualEffect',
@@ -81,10 +81,10 @@ const initialState = {
       //   ],
       // },
       // {
-      //   id: '4',
+      //   id: '5',
       //   actions: [
       //     {
-      //       id: 'action4',
+      //       id: 'action5',
       //       start: 40,
       //       end: 60,
       //       effectId: 'visualEffect',

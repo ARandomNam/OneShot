@@ -8,6 +8,11 @@ export const previewMediaAction = (mediaUrl) => ({
     payload: {mediaUrl: mediaUrl},
 });
 
+export const setMediaTypeAction = (mediaType) => ({
+    type: 'SET_MEDIA_TYPE_ACTION',
+    payload: {mediaType: mediaType},
+})
+
 export const setPreviewerLoadingAction = (isLoading) => ({
     type: 'SET_PREVIEWER_LOADING_ACTION',
     payload: {isLoading: isLoading},

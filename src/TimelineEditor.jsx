@@ -43,6 +43,15 @@ const TimelineEditor = () => {
     // Get timelineData from React Redux store
     const timelineData = useSelector(state => state.timeline.timelineData);
 
+    // For handling the change in timelineData as users interact with the timeline editor
+    const timelineDataRef = useRef(timelineData);
+    const handleTimelineDataChange = (changedTimelineData) => {
+        timelineDataRef.current = changedTimelineData;
+        // console.log(changedTimelineData);
+
+        // ISSUE !!!! Work to do here for updating the React Redux store with the changed timelineData
+    };
+
 
     // For scrollwheel scale adjustment
     const [scale, setScale] = useState(10);
@@ -81,7 +90,7 @@ const TimelineEditor = () => {
             editorData={timelineData}
             effects={mockEffect}
             style={{width: '100%', height: '400px'}}
-            onChange={() => {console.log('change')}}
+            onChange={handleTimelineDataChange}
             autoScroll={true}
             ref={timelineState}
             scale={scale}
